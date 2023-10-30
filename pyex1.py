@@ -11,3 +11,14 @@ def fizzbizz(n):
 
 n = int(input('Enter upperlimit: '))
 fizzbizz(n)
+
+def pallindrome(s):
+    string = s
+    reverse = s[::-1]
+    if (string == reverse):
+        print('True')
+    else:
+        print('False')
+
+s = input('Enter the string: ')
+pallindrome(s)
