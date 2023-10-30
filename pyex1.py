@@ -22,3 +22,16 @@ def pallindrome(s):
 
 s = input('Enter the string: ')
 pallindrome(s)
+
+import collections
+def panagram(s):
+    s = s.lower()
+    count = collections.Counter(s)
+    if len(count) == 26:
+        return True
+    else:
+        return False
+        
+s = input('Enter the string: ')    
+print(panagram(s))
+
