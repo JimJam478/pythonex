@@ -45,5 +45,6 @@ def freq(s):
             dict[i] = 1
     return dict 
 
-print(freq('jishnu fundajjhj')) 
+s = input('Enter the string: ')
+print(freq(s)) 
 
