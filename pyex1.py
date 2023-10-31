@@ -9,42 +9,32 @@ def fizzbizz(n):
         else:
             print(i)
 
-n = int(input('Enter upperlimit: '))
-fizzbizz(n)
-
-def pallindrome(s):
-    string = s
-    reverse = s[::-1]
-    if (string == reverse):
-        print('True')
-    else:
-        print('False')
-
-s = input('Enter the string: ')
-pallindrome(s)
-
+def palindrome(s):
+    return s == s[::-1]
+    
 import collections
 def panagram(s):
     s = s.lower()
     count = collections.Counter(s)
-    if len(count) == 26:
-        return True
-    else:
-        return False
-        
-s = input('Enter the string: ')    
-print(panagram(s))
-
-
+    for i in "abcdefghijklmnopqrstuvwxyz":
+        if i not in s:
+            return False
+    return True
+ 
 def freq(s):
-    dict = {}
+    count = {}
     for i in s:
-        if i in dict:
-            dict[i] += 1
+        if i in count:
+            count[i] += 1
         else:
-            dict[i] = 1
-    return dict 
+            count[i] = 1
+    return count 
 
-s = input('Enter the string: ')
-print(freq(s)) 
+def main():
+    print(fizzbizz(100))
+    print(palindrome('abba'))
+    print(panagram("abcdefghijklmnopqrstuvwxyz"))
+    print(freq('dfsdfdsfadsf dsfadfdf'))
 
+if __name__ == '__main__':
+    main()
