@@ -11,6 +11,10 @@ class TestPanagram(unittest.TestCase):
     def testIsNotPanagram(self):
         sentence = "the quick brown fox jumped over the lazy dog"
         self.assertFalse(panagram(sentence))
+
+    def testLangInput(self):
+        lang = "ഓണം"
+        self.assertFalse(panagram(lang))
     
     def testNullInput(self):
         ret = panagram("")
@@ -29,9 +33,22 @@ class TestPalindrome(unittest.TestCase):
         ret = palindrome("")
         self.assertTrue(ret)
     
-    def testSingleInput(self):
+    def testSingleInputPalindrome(self):
         ret = palindrome("z")
         self.assertTrue(ret)
+
+class TestFreq(unittest.TestCase):
+    def testIsFreq(self):
+        sentence = "the quick brown fox jumps over the lazy dog"
+        self.assertTrue(freq(sentence))
+   
+    def testSymbolsInput(self):
+        symbols = "+_*$&()*($(#))"
+        self.assertTrue(freq(symbols))
+        
+    def testNullInputDict(self):
+        ret = freq("")
+        self.assertFalse(ret)
 
 
 if __name__ == "__main__":
