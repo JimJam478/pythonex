@@ -9,4 +9,11 @@ def test_plus():
 def test_sub():
     assert evaluate("98-") == 1
 
+def test_sub2():
+    assert evaluate("36-") == -3
+
+def test_prod():
+    assert evaluate("37*") == 21
+
+
 
