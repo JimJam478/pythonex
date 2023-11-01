@@ -1,2 +1,2 @@
 def evaluate(str):
-    return int(5)    
+    return int(6)    
