@@ -6,3 +6,7 @@ def test_singleoperand():
 def test_plus():
     assert evaluate("58+") == 13
 
+def test_sub():
+    assert evaluate("98-") == 1
+
+
