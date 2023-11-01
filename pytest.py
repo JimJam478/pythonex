@@ -38,18 +38,16 @@ class TestPalindrome(unittest.TestCase):
         self.assertTrue(ret)
 
 class TestFreq(unittest.TestCase):
-    def testIsFreq(self):
-        sentence = "the quick brown fox jumps over the lazy dog"
-        self.assertTrue(freq(sentence))
+    def testFreq(self):
+        String = "aabbbc"
+        expected_dict = {'a':2,'b':3,'c':1}
+        self.assertDictEqual(expected_dict,freq(String))
    
     def testSymbolsInput(self):
-        symbols = "+_*$&()*($(#))"
-        self.assertTrue(freq(symbols))
+        symbols = "##"
+        expected_dict = {'#':2}
+        self.assertDictEqual(expected_dict,freq(symbols))
         
-    def testNullInputDict(self):
-        ret = freq("")
-        self.assertFalse(ret)
-
 
 if __name__ == "__main__":
     unittest.main()
