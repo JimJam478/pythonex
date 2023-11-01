@@ -15,5 +15,8 @@ def test_sub2():
 def test_prod():
     assert evaluate("37*") == 21
 
+def test_div():
+    assert evaluate("93/") == 3
+
 
 
