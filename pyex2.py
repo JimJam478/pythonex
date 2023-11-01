@@ -12,3 +12,5 @@ def evaluate(string):
             stack.append(int(i))    
     return stack.pop()
 
+
+print(evaluate("34+"))
