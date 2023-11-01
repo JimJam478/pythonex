@@ -18,5 +18,8 @@ def test_prod():
 def test_div():
     assert evaluate("93/") == 3
 
+def test_alphabet():
+    assert not evaluate("a+")
+
 
 

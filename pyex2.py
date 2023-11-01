@@ -15,3 +15,5 @@ def evaluate(string):
         else:
             stack.append(int(i))    
     return stack.pop()
+
+print(evaluate("234+"))
