@@ -24,4 +24,8 @@ def evaluate(string):
                 
     return stack.pop()
 
-print(evaluate("4+"))
+def main():
+    print(evaluate("54+"))
+          
+if __name__ == "__main__":
+main()
