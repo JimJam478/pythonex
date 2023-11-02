@@ -21,5 +21,8 @@ def test_div():
 def test_alphabet():
     assert not evaluate("a+")
 
+def test_single_Opnd_and_Oper():
+    assert not evaluate("6+")
+
 
 
