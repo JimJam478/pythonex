@@ -4,6 +4,9 @@ def evaluate(string):
     for i in string:
         if i not in accepted:
             return False
+        elif i in ['+','-','*','/'] and len(stack) < 2:
+            return False 
+        
         elif i in ['+','-','*','/']:
             op1 = stack.pop()
             op2 = stack.pop()
@@ -21,4 +24,4 @@ def evaluate(string):
                 
     return stack.pop()
 
-print(evaluate("234+"))
+print(evaluate("4+"))
